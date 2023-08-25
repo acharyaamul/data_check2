@@ -12,13 +12,15 @@ names(nfi)
 
 unique(ceoNFI$pl_plot_id)
 
-
 unique(nfi$Plot_id)
 
 ceo<-ceonfi_removDup[order(ceonfi_removDup$pl_plot_id), ]
 
 nfi<-nfi[order(nfi$Plot_id),]
 
+# Find missing PLot in CEo NFI data compared to Two times NFI data provided by Inventory Section
+missing_plot_ids <- setdiff(ceo$pl_plot_id,nfi$Plot_id)
+
+missing_plot_ids 
 
 
-check_plotid<- ceo$pl_plot_id==nfi$Plot_id
