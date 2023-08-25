@@ -22,5 +22,5 @@ nfi<-nfi[order(nfi$Plot_id),]
 missing_plot_ids <- setdiff(ceo$pl_plot_id,nfi$Plot_id)
 
 missing_plot_ids 
-
+##"147-23-4"
 
